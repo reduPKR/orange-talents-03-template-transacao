@@ -24,7 +24,7 @@ public class Transacao {
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Cartao cartao;
     @CreationTimestamp
-    private LocalDateTime efetivadoEm;
+    private LocalDateTime efetivadaEm;
 
     public Transacao() {
     }
@@ -52,7 +52,7 @@ public class Transacao {
         return cartao;
     }
 
-    public LocalDateTime getEfetivadoEm() {
-        return efetivadoEm;
+    public LocalDateTime getEfetivadaEm() {
+        return efetivadaEm;
     }
 }

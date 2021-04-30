@@ -19,18 +19,18 @@ public class ListenerDeTransacao {
         System.out.println("******************************");
         System.out.println("Nova transação");
 
-        LocalDateTime efetivadoEm = efetuarTransacao(transacao);
+        LocalDateTime efetivadaEm = efetuarTransacao(transacao);
         System.out.println(transacao.getId());
         System.out.println(transacao.getCartaoId());
         System.out.println(transacao.getEstabelecimentoNome());
         System.out.println(transacao.getValor());
-        System.out.println(efetivadoEm);
+        System.out.println(efetivadaEm);
     }
 
     private LocalDateTime efetuarTransacao(TransacaoResponse transacaoResponse) {
         Transacao transacao = transacaoResponse.toModel();
         transacaoRepository.save(transacao);
-        return transacao.getEfetivadoEm();
+        return transacao.getEfetivadaEm();
     }
 
 }
