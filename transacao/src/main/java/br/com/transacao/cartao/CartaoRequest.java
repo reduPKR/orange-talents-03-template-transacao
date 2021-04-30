@@ -1,6 +1,6 @@
-package br.com.transacao.transacoes;
+package br.com.transacao.cartao;
 
-public class Cartao {
+public class CartaoRequest {
     private String id;
     private String email;
 

@@ -1,6 +1,6 @@
-package br.com.transacao.transacoes;
+package br.com.transacao.estabelecimento;
 
-public class Estabelecimento {
+public class EstabelecimentoResponse {
     private String nome;
     private String cidade;
     private String endereco;
@@ -15,5 +15,9 @@ public class Estabelecimento {
 
     public String getEndereco() {
         return endereco;
+    }
+
+    public Estabelecimento toModel() {
+        return new Estabelecimento(nome, cidade, endereco);
     }
 }

@@ -1,5 +1,7 @@
 package br.com.transacao.transacoes;
 
+import br.com.transacao.cartao.CartaoRequest;
+import br.com.transacao.cartao.CartaoFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +13,7 @@ public class TransacaoController {
     private CartaoFeign cartaoFeign;
 
     @PostMapping
-    public ResponseEntity<?> salvar(@RequestBody Cartao cartao){
+    public ResponseEntity<?> salvar(@RequestBody CartaoRequest cartao){
         cartaoFeign.enviar(cartao);
         return ResponseEntity.ok().build();
     }
