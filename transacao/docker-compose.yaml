@@ -1,17 +1,5 @@
 version: '3'
 services:
-  transacao:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    image: redu/transacao
-    #restart: always
-    ports:
-      - '8080:8080'
-    depends_on:
-      - transacoes
-
-  #Daqui para baixo peguei na zup
   zookeeper:
     image: "confluentinc/cp-zookeeper:5.2.1"
     environment:
