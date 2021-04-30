@@ -29,4 +29,12 @@ public class Transacao {
     public LocalDateTime getEfetivadoEm() {
         return efetivadoEm;
     }
+
+    public String getCartaoId() {
+        return cartao.getId();
+    }
+
+    public String getEstabelecimentoNome() {
+        return estabelecimento.getNome();
+    }
 }
