@@ -9,7 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface TransacaoRepository extends JpaRepository<Transacao, String> {
-    Optional<Transacao> findTop10ByCartaoIdOrderByEfetivadaEmDesc(String id);
+    List<Transacao> findTop10ByCartaoIdOrderByEfetivadaEmDesc(String id);
 
-    Optional<Cartao> findCartaoId(String id);
+    Optional<Transacao> findFirstByCartaoId(String id);
 }
