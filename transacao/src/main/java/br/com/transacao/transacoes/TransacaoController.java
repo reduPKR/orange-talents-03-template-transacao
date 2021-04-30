@@ -14,8 +14,8 @@ public class TransacaoController {
     private CartaoFeign cartaoFeign;
 
     @PostMapping
-    public ResponseEntity<?> salvar(@RequestBody Transacao transacao){
-        cartaoFeign.enviar(transacao.getCartao());
+    public ResponseEntity<?> salvar(@RequestBody Cartao cartao){
+        cartaoFeign.enviar(cartao);
         return ResponseEntity.ok().build();
     }
 }
