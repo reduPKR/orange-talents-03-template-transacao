@@ -1,8 +1,10 @@
 package br.com.transacao.cartao;
 
+
+import com.sun.istack.NotNull;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
 
 @Entity
 public class Cartao {
